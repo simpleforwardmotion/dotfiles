@@ -118,7 +118,13 @@ colorscheme zenburn
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FONTS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set guifont=Menlo:h14
+if has("win32")
+    set guifont=Consolas:h10:cANSI
+endif
+
+if has("macunix")
+    set guifont=Menlo:h14
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
