@@ -1,0 +1,21 @@
+[user]
+	name = John Parrish
+	email = john@simpleforwardmotion.com
+[core]
+	excludesfile = /Users/john/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = vimdiff
+[alias]
+	di = diff
+	dc = diff --cached
+	aa = add --all
+	st = status
+	ci = commit
+	l = log --decorate --graph --all --pretty=format:\"%h - %Cred%d%Creset %s %Cgreen(%cr)%Creset %Cblue<%an>%Creset\"
